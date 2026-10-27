@@ -27,3 +27,14 @@
 Keine Prüfung auf echten Smartphones oder mit verschiedenen Screenreadern. Responsive CSS-Umbrüche sind für 1100, 850 und 600 Pixel implementiert; manuelle visuelle Prüfung erfolgte im verfügbaren Browserfenster. GitHub-Actions-Deployment ist vorbereitet, wurde jedoch nicht gegen ein neues Repository ausgeführt. Der HTML-Export und JSON-Import sind auf Modellebene getestet; ein vollständiger Dateidialog-Rundlauf wurde nicht manuell geprüft.
 
 Quellenstand und Grenzen der generierten Webspecial-Vorschau sind in README.md dokumentiert. Inhaltsangaben und didaktische Deutungsangebote bleiben für einen schulischen Einsatz redaktionell prüfbar.
+
+
+## Erweiterungsprüfung: Denkwege und Lovable
+
+- Acht automatisierte Tests: zusätzlich Briefing mit philosophischem Thema, eigenen Notizen, ausgewählten Szenen, Storyboard und wechselndem Belegprüfstatus; leere Projekte erzeugen offene Angaben; alle 30 Denkwege haben eindeutige Titel und gültige Szenenverweise.
+- Im Browser den Denkweg „Schuld im Konjunktiv: das moralische Pech“ geöffnet; philosophisches Werkzeug, Gegenprobe, Formidee und vier Originaltextlinks angezeigt.
+- Thema, Leitfrage und Szenen getrennt übernommen; Werkstatt zeigt unverändert die Leitfrage und vier ausgewählte Szenen.
+- „Mit Lovable bauen“ geöffnet: acht Schritte, Materialstand, Quellenhinweise und Briefing aus dem aktuellen Projekt angezeigt.
+- „Briefing kopieren“ getestet: Erfolgsmeldung im Browser angezeigt.
+- Kein Lovable-Projekt angelegt und keine Daten an Lovable übertragen. Die Anleitung und Briefingerstellung sind die implementierte Funktion.
+- GitHub Pages wurde nach der Erstlieferung erfolgreich aktiviert; der Workflow baut und veröffentlicht Änderungen auf main automatisch.

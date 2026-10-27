@@ -25,7 +25,7 @@ npm run preview
 
 - Ausstellungsartige Startseite mit zwei Zugängen.
 - Durchsuchbarer Katalog mit allen 28 Werkabschnitten von Zueignung bis Kerker, Figuren, Motiven, offenen Analysefragen und direkten Gutenberg-Kapitellinks.
-- Szenenmodus und Themenmodus mit zehn Themen sowie frei formulierbarem Thema; sechs Arbeitsschritte mit dauerhaft gespeicherten Notizen.
+- Szenenmodus und Themenmodus mit 20 philosophischen Denkwegen, zehn klassischen Themen sowie frei formulierbarem Thema; sechs Arbeitsschritte mit dauerhaft gespeicherten Notizen.
 - Werkstatt mit Titel, Leitfrage, Zielpublikum, Szenenauswahl, Textbelegen, überprüfbarem Quellenstatus, Medien- und Interaktionsplanung.
 - Bearbeitbares und mit Pfeiltasten-Schaltflächen umordnbares Storyboard sowie umordnbare Textbelege.
 - Vorschau und eigenständiger HTML-Export aus dem Storyboard, einschliesslich Textbelegen und Quellen.
@@ -58,7 +58,7 @@ Die generierte Vorschau ist bewusst eine einfache Struktur. Sie erfindet keine M
 4. Auf `main` pushen oder den Workflow **Deploy to GitHub Pages** manuell starten.
 5. Der Workflow installiert mit `npm ci`, testet, baut und veröffentlicht `dist/`. Die URL erscheint im Deployment-Ergebnis.
 
-`base: './'` unterstützt Repository-Unterpfade und eigene Domains. Die Navigation nutzt URL-Fragmente statt Serverrouten; ein SPA-Fallback ist deshalb nicht nötig. Eine Veröffentlichung wurde mit der lokalen Lieferung nicht ausgeführt. Vor öffentlicher Freigabe die institutionellen Vorgaben zum Hosting prüfen.
+`base: './'` unterstützt Repository-Unterpfade und eigene Domains. Die Navigation nutzt URL-Fragmente statt Serverrouten; ein SPA-Fallback ist deshalb nicht nötig. Die Anwendung ist unter https://patrickfischerksa.github.io/faust-digital/ veröffentlicht. Änderungen auf `main` werden automatisch gebaut und veröffentlicht. Vor öffentlicher Freigabe die institutionellen Vorgaben zum Hosting prüfen.
 
 ## Struktur
 
@@ -72,6 +72,12 @@ src/
     UI.tsx                Beschriftete Formulare, Überschriften, Quellenlinks
     Workshop.tsx          Planung, Belegsammlung, Storyboard und Vorschau
     Lab.tsx               Sechs Demos und Figurenbeziehungen
+    TopicCatalog.tsx      Suchbare Denkwege, Gegenproben und Übernahme
+    LovableGuide.tsx      Schrittfolge und personalisiertes Briefing
+  data/topics.ts          Philosophische Denkwege und Begriffsweiterlektüre
+  lovable.ts              Projektstand als strukturiertes Lovable-Briefing
+  lovable.test.ts         Vollständigkeit des Briefings und Szenenverweise
+  download.ts             Gemeinsame lokale Datei-Downloads
   style.css               Tailwind-Integration, Gestaltung und responsive Regeln
 .github/workflows/deploy.yml
 ```
@@ -97,3 +103,22 @@ Inhaltsangaben und Analysefragen sind redaktionelle, KI-unterstützt erstellte L
 Semantische Navigation, beschriftete Formularfelder, sichtbare Fokusmarkierungen, Sprunglink, Tastaturbedienung über native Buttons und Formulare, Statusmeldungen, Importdialog mit Escape und Fokusbegrenzung, responsive Umbrüche und Berücksichtigung von `prefers-reduced-motion`. Änderungen sind ohne Drag-and-drop möglich. Kein Anspruch auf formale WCAG-Zertifizierung; besonders der vollständige Einsatz mit verschiedenen Screenreadern bleibt separat zu prüfen.
 
 Automatisierte Tests prüfen JSON-Rundlauf, beschädigte und übergrosse Importe, doppelte IDs, Umordnungsgrenzen und HTML-Escaping. `npm run build` prüft TypeScript und erzeugt die statische Produktionsversion. Manuelle Browserprüfungen sind im mitgelieferten `QA.md` dokumentiert.
+
+
+## Erweiterung: Philosophische Denkwege und Lovable
+
+Der Themenkatalog bietet standardmässig 20 neue Denkwege aus Erkenntnis, Ethik, Freiheit und Selbst, Zeit und Existenz, Welt und Medien sowie Metaphysik. Suchfeld und Denkfeldfilter erschliessen die Auswahl; die zehn klassischen Ausgangsthemen bleiben verfügbar. Jeder Denkweg enthält eine zugespitzte Frage, ein kurz erläutertes philosophisches Werkzeug, eine ernsthafte Gegenprobe, passende Originaltextlinks und eine digitale Formidee. Thema, Leitfrage und Ausgangsszenen werden getrennt übernommen; ein Themenwechsel überschreibt keine bestehende Leitfrage oder Szenenauswahl. Die Übernahme einer vorgeschlagenen Leitfrage ist ausdrücklich als Ersetzen beschriftet, wenn bereits eine existiert.
+
+Die Begriffe sind heutige Lesewerkzeuge und redaktionelle Denkexperimente. Sie behaupten weder ein philosophisches System Goethes noch historische Einflüsse. Für ausgewählte Begriffe sind geprüfte englischsprachige Artikel der Stanford Encyclopedia of Philosophy verlinkt: Moral Luck, Personal Autonomy, Personal Identity, Paternalism, Speech Acts und Foreknowledge and Free Will (Linkprüfung 27.10.2026). Sie ersetzen keine eigene Textanalyse.
+
+Unter **Werkstatt → Mit Lovable bauen** führen acht Schritte von der redaktionellen These über einen Musterabschnitt zu Interaktionen, Prüfung und Veröffentlichung. Inspiriert ist diese Dramaturgie vom bestehenden Produktionsatelier der Berlin-Thriller-Werkstatt; Faust-Inhalte, Gegenproben und Projektanbindung sind eigenständig ausgearbeitet.
+
+Das personalisierte Briefing enthält den gesamten aktuellen Arbeitsstand: Titel, Leitfrage, Publikum, Modus, Thema, passende Denkimpulse, ausgewählte Szenen, sechs Arbeitsnotizen, alle Belege mit selbst gesetztem Prüfstatus, Storyboard, Medien- und Interaktionsplanung und Quellen. Fehlendes Material bleibt sichtbar offen. Das Briefing kann kopiert oder als `.txt` heruntergeladen werden. Drei Folgeprompts unterstützen Interaktionsbau, Dramaturgie und mobile Bedienbarkeit. Es werden keine Daten automatisch an Lovable geschickt. Die Projekt-JSON bleibt das Format zum verlustfreien Speichern in FAUST DIGITAL; sie ist kein garantierter Lovable-Projektimport.
+
+Lovable ist ein optionaler externer Dienst, der ein eigenes Konto und Build-Credits verwendet. Die Lernplattform selbst bleibt kostenlos, ohne Anmeldung und ohne API-Schlüssel. Eine Lovable-Verbindung oder ein kostenpflichtiger Dienst wurde nicht eingerichtet. Werkzeughinweise wurden am 27.10.2026 mit den offiziellen Quellen abgeglichen:
+
+- https://docs.lovable.dev/introduction/getting-started
+- https://docs.lovable.dev/prompting/prompting-one
+- https://lovable.dev/blog/lovable-file-uploads
+
+Bestehende lokale Projekte und JSON-Dateien bleiben mit Datenformat Version 1 kompatibel. Die neuen Themen werden wie bisher als Titel gespeichert; das Briefing wird daraus und aus den Projektdaten bei jedem Öffnen neu erzeugt.
