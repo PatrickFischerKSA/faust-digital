@@ -47,3 +47,11 @@ Quellenstand und Grenzen der generierten Webspecial-Vorschau sind in README.md d
 - Die Metaphysik-Ansicht ist der initiale Denkweg der Schwerpunktansicht. Alle Themen enthalten Werkzeug, Leitfrage, Gegenprobe, Webspecial-Idee und gültige Szenenverweise.
 - In den Detailansichten sind Vergleichsperspektiven und ihre Grenzen sichtbar; für Spinozismus und #MeToo insbesondere keine pauschale Gleichsetzung mit Goethes Position oder historischen Normen.
 - Keine Testauswahl als neues Projektthema übernommen: bestehende Projektfrage und Szenenauswahl blieben beim Filtern unverändert.
+
+## Eigener Themenvorschlag
+
+- Der Einstieg „Eigenes Thema vorschlagen“ steht direkt oberhalb des Katalogs und lässt sich per nativer Disclosure-Schaltfläche öffnen.
+- Im Browser bei leerem Titel die deaktivierte Übernahme geprüft; anschliessend einen freien Titel eingegeben und übernommen.
+- Der aktuelle Titel wurde als „Eigener Vorschlag“ angezeigt und die erfolgreiche lokale Übernahme bestätigt.
+- Die bestehende Leitfrage blieb bei leerem optionalem Leitfragenfeld unverändert; die bestehenden Projektdaten werden über denselben Update-Pfad erhalten.
+- Produktionsbuild und die vorhandenen neun Daten- und Exporttests erfolgreich.

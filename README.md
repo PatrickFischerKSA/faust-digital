@@ -131,3 +131,7 @@ Der Katalog hebt fünf Schwerpunkte direkt als Filter hervor: Metaphysik (fünf 
 Jeder Schwerpunkt macht seinen methodischen Rahmen sichtbar; dieser fliesst auch in das Lovable-Briefing ein. Insbesondere sind Spinozas Begriffe keine pauschalen Zuschreibungen an Goethe. Die #MeToo-Perspektive trennt Einwilligung, Macht und Glaubwürdigkeit, ohne historisches Drama und heutige Normen gleichzusetzen oder ein juristisches Urteil vorzugeben. Karrierevergleiche bleiben an Faust I gebunden.
 
 Die ergänzenden SEP-Artikel zu Spinoza, Metaphysik, wissenschaftlicher Methode, feministischen Perspektiven auf sexualisierte Gewalt sowie Wirtschaftsethik wurden am 27.10.2026 geprüft. Sie sind Begriffsweiterlektüre, keine Belege für eine bestimmte Faust-Deutung. Einträge und ihre Quellenzuordnung stehen in `src/data/focusTopics.ts`.
+
+## Eigene Themen vorschlagen
+
+Direkt oberhalb des Katalogs unter **Atelier → Themen-Webspecial → Eigenes Thema vorschlagen** lässt sich ein eigener Themenvorschlag mit optionaler Leitfrage übernehmen. Der Titel ist erforderlich; eine nicht eingetragene Leitfrage lässt die bestehende Frage unverändert. Eine eingetragene Frage ersetzt sie mit entsprechendem sichtbarem Hinweis. Das aktuelle Projektthema wird direkt im Bereich angezeigt; freie Themen sind als eigener Vorschlag gekennzeichnet. Szenen, Belege und Storyboard bleiben bestehen. Die Übernahme speichert lokal im bestehenden Projektformat; JSON-Export und Lovable-Briefing enthalten das eigene Thema. Es wird kein Vorschlag an Dritte gesendet.
