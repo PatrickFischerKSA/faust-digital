@@ -1,6 +1,7 @@
 import type {Project} from './model.ts';
 import {scenes,steps} from './data/faust.ts';
 import {topicIdeas,topicReadings} from './data/topics.ts';
+import {focusContexts} from './data/focusTopics.ts';
 export function buildLovablePrompt(p:Project):string {
  const idea=topicIdeas.find(t=>t.title===p.topic);
  const selected=p.scenes.map(id=>scenes.find(s=>s.id===id)).filter(s=>s!==undefined);
@@ -13,6 +14,7 @@ Modus: ${p.mode==='theme'?'Themen-Webspecial':'Szenen-Webspecial'}
 Thema: ${p.topic||'[Thema aus der Leitfrage entwickeln]'}
 Eigene Leitfrage: ${p.question||'[LEITFRAGE FEHLT – vor dem inhaltlichen Ausbau nachfragen]'}
 ${idea?`Philosophisches Werkzeug / redaktioneller Denkimpuls: ${idea.concept}
+Methodischer Rahmen: ${focusContexts[idea.field]||'Begriffsmodell und Originaltext getrennt prüfen.'}
 Zu prüfende Gegenposition: ${idea.counter}
 Formidee, nur als Option: ${idea.format}
 Begriffsweiterlektüre (keine Faust-Interpretation): ${(topicReadings[p.topic]||[]).map(r=>r.title+' – '+r.url).join('; ')||'[bei Bedarf selbst recherchieren]'}`:''}

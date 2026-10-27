@@ -38,3 +38,12 @@ Quellenstand und Grenzen der generierten Webspecial-Vorschau sind in README.md d
 - „Briefing kopieren“ getestet: Erfolgsmeldung im Browser angezeigt.
 - Kein Lovable-Projekt angelegt und keine Daten an Lovable übertragen. Die Anleitung und Briefingerstellung sind die implementierte Funktion.
 - GitHub Pages wurde nach der Erstlieferung erfolgreich aktiviert; der Workflow baut und veröffentlicht Änderungen auf main automatisch.
+
+## Schwerpunktprüfung: Metaphysik, Spinozismus, #MeToo, Wissenschaftstheorie, Karriere
+
+- Neun automatisierte Tests erfolgreich; zusätzlich wird für jeden neuen Schwerpunkt die Übernahme des methodischen Rahmens und der geprüften Weiterlektüre in das Lovable-Briefing geprüft. Die Quellenzuordnung der älteren Themen bleibt trotz geänderter Reihenfolge erhalten.
+- 36 philosophische Denkwege und zehn klassische Zugänge insgesamt; die Schwerpunktansicht zeigt 18 Themen einschliesslich zweier bereits vorhandener Metaphysik-Themen.
+- Im Browser die sichtbaren Schwerpunktfilter geprüft: Spinozismus zeigt vier, #MeToo und Macht drei, Wissenschaftstheorie drei sowie Karriere und Ethik drei Themen mit zugehöriger Detailansicht.
+- Die Metaphysik-Ansicht ist der initiale Denkweg der Schwerpunktansicht. Alle Themen enthalten Werkzeug, Leitfrage, Gegenprobe, Webspecial-Idee und gültige Szenenverweise.
+- In den Detailansichten sind Vergleichsperspektiven und ihre Grenzen sichtbar; für Spinozismus und #MeToo insbesondere keine pauschale Gleichsetzung mit Goethes Position oder historischen Normen.
+- Keine Testauswahl als neues Projektthema übernommen: bestehende Projektfrage und Szenenauswahl blieben beim Filtern unverändert.

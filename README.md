@@ -25,7 +25,7 @@ npm run preview
 
 - Ausstellungsartige Startseite mit zwei Zugängen.
 - Durchsuchbarer Katalog mit allen 28 Werkabschnitten von Zueignung bis Kerker, Figuren, Motiven, offenen Analysefragen und direkten Gutenberg-Kapitellinks.
-- Szenenmodus und Themenmodus mit 20 philosophischen Denkwegen, zehn klassischen Themen sowie frei formulierbarem Thema; sechs Arbeitsschritte mit dauerhaft gespeicherten Notizen.
+- Szenenmodus und Themenmodus mit 36 philosophischen Denkwegen, zehn klassischen Themen sowie frei formulierbarem Thema; sechs Arbeitsschritte mit dauerhaft gespeicherten Notizen.
 - Werkstatt mit Titel, Leitfrage, Zielpublikum, Szenenauswahl, Textbelegen, überprüfbarem Quellenstatus, Medien- und Interaktionsplanung.
 - Bearbeitbares und mit Pfeiltasten-Schaltflächen umordnbares Storyboard sowie umordnbare Textbelege.
 - Vorschau und eigenständiger HTML-Export aus dem Storyboard, einschliesslich Textbelegen und Quellen.
@@ -107,7 +107,7 @@ Automatisierte Tests prüfen JSON-Rundlauf, beschädigte und übergrosse Importe
 
 ## Erweiterung: Philosophische Denkwege und Lovable
 
-Der Themenkatalog bietet standardmässig 20 neue Denkwege aus Erkenntnis, Ethik, Freiheit und Selbst, Zeit und Existenz, Welt und Medien sowie Metaphysik. Suchfeld und Denkfeldfilter erschliessen die Auswahl; die zehn klassischen Ausgangsthemen bleiben verfügbar. Jeder Denkweg enthält eine zugespitzte Frage, ein kurz erläutertes philosophisches Werkzeug, eine ernsthafte Gegenprobe, passende Originaltextlinks und eine digitale Formidee. Thema, Leitfrage und Ausgangsszenen werden getrennt übernommen; ein Themenwechsel überschreibt keine bestehende Leitfrage oder Szenenauswahl. Die Übernahme einer vorgeschlagenen Leitfrage ist ausdrücklich als Ersetzen beschriftet, wenn bereits eine existiert.
+Der Themenkatalog bietet 36 philosophische Denkwege aus Erkenntnis, Ethik, Freiheit und Selbst, Zeit und Existenz, Welt und Medien sowie Metaphysik. Suchfeld und Denkfeldfilter erschliessen die Auswahl; die zehn klassischen Ausgangsthemen bleiben verfügbar. Jeder Denkweg enthält eine zugespitzte Frage, ein kurz erläutertes philosophisches Werkzeug, eine ernsthafte Gegenprobe, passende Originaltextlinks und eine digitale Formidee. Thema, Leitfrage und Ausgangsszenen werden getrennt übernommen; ein Themenwechsel überschreibt keine bestehende Leitfrage oder Szenenauswahl. Die Übernahme einer vorgeschlagenen Leitfrage ist ausdrücklich als Ersetzen beschriftet, wenn bereits eine existiert.
 
 Die Begriffe sind heutige Lesewerkzeuge und redaktionelle Denkexperimente. Sie behaupten weder ein philosophisches System Goethes noch historische Einflüsse. Für ausgewählte Begriffe sind geprüfte englischsprachige Artikel der Stanford Encyclopedia of Philosophy verlinkt: Moral Luck, Personal Autonomy, Personal Identity, Paternalism, Speech Acts und Foreknowledge and Free Will (Linkprüfung 27.10.2026). Sie ersetzen keine eigene Textanalyse.
 
@@ -122,3 +122,12 @@ Lovable ist ein optionaler externer Dienst, der ein eigenes Konto und Build-Cred
 - https://lovable.dev/blog/lovable-file-uploads
 
 Bestehende lokale Projekte und JSON-Dateien bleiben mit Datenformat Version 1 kompatibel. Die neuen Themen werden wie bisher als Titel gespeichert; das Briefing wird daraus und aus den Projektdaten bei jedem Öffnen neu erzeugt.
+
+
+## Thematische Schwerpunkte
+
+Der Katalog hebt fünf Schwerpunkte direkt als Filter hervor: Metaphysik (fünf Denkwege), Spinozismus (vier), #MeToo und Macht (drei), Wissenschaftstheorie (drei) sowie Karriere und Ethik (drei). 16 neu ausgearbeitete Themen ergänzen die vorherigen 20 philosophischen Denkwege; die zehn klassischen Themen bleiben erhalten. Die Startansicht zeigt die Schwerpunkte, sämtliche übrigen Themen sind über „Neue Denkwege“ oder „Alle“ erreichbar. Die angezeigten Anzahlen werden aus den Daten berechnet.
+
+Jeder Schwerpunkt macht seinen methodischen Rahmen sichtbar; dieser fliesst auch in das Lovable-Briefing ein. Insbesondere sind Spinozas Begriffe keine pauschalen Zuschreibungen an Goethe. Die #MeToo-Perspektive trennt Einwilligung, Macht und Glaubwürdigkeit, ohne historisches Drama und heutige Normen gleichzusetzen oder ein juristisches Urteil vorzugeben. Karrierevergleiche bleiben an Faust I gebunden.
+
+Die ergänzenden SEP-Artikel zu Spinoza, Metaphysik, wissenschaftlicher Methode, feministischen Perspektiven auf sexualisierte Gewalt sowie Wirtschaftsethik wurden am 27.10.2026 geprüft. Sie sind Begriffsweiterlektüre, keine Belege für eine bestimmte Faust-Deutung. Einträge und ihre Quellenzuordnung stehen in `src/data/focusTopics.ts`.
