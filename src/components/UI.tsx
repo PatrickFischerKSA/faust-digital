@@ -1,0 +1,4 @@
+import type { ReactNode } from 'react';
+export function Field({label,value,onChange,placeholder='',multiline=false,rows=4}:{label:string;value:string;onChange:(v:string)=>void;placeholder?:string;multiline?:boolean;rows?:number}) {return <label className="field"><span>{label}</span>{multiline?<textarea rows={rows} value={value} onChange={e=>onChange(e.target.value)} placeholder={placeholder}/>:<input value={value} onChange={e=>onChange(e.target.value)} placeholder={placeholder}/>}</label>}
+export function Heading({eyebrow,title,children}:{eyebrow:string;title:string;children?:ReactNode}){return <div className="page-heading"><span className="eyebrow">{eyebrow}</span><h1>{title}</h1>{children&&<p>{children}</p>}</div>}
+export function SourceLink({url,children='Zum Originaltext'}:{url:string;children?:ReactNode}){return <a className="text-link" href={url} target="_blank" rel="noreferrer">{children} ↗</a>}
