@@ -1,0 +1,13 @@
+:root { color-scheme: light; --ink: #25352b; --paper: #fbf8f4; --accent: #68419b; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1.1rem/1.6 system-ui, sans-serif; }
+header, footer { padding: .9rem max(1rem, 5vw); background: #e7e5d5; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem; }
+nav { display: flex; flex-wrap: wrap; gap: .8rem; }
+a { color: var(--accent); text-underline-offset: .2em; }
+main { max-width: 55rem; margin: auto; padding: 2rem 1.2rem 4rem; }
+h1, h2, h3 { font-family: Georgia, serif; line-height: 1.12; }
+h1 { font-size: clamp(2rem, 6vw, 4rem); }
+h3 { margin-top: 2em; }
+blockquote { margin: 1rem 0; border-left: .25rem solid var(--accent); padding-left: 1rem; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; border-bottom: 1px solid #aeb4a3; padding: .5rem; }
