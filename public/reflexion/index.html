@@ -1,5 +1,5 @@
-<!doctype html><html lang="de-CH"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wann ist es genug? · Faust Digital</title><link rel="stylesheet" href="reflexion.css"></head><body><header><a href="../">← Faust Digital</a></header><main><h1 id="wann-ist-es-genug">Wann ist es genug?</h1>
-<p><strong>Faust Digital · Projektreflexion</strong></p>
+<!doctype html><html lang="de-CH"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wann ist es genug? · Faust Digital</title><link rel="stylesheet" href="reflexion.css"><style>.try-station{margin:2rem 0;padding:1.25rem;border:2px solid var(--accent);border-radius:.6rem}.try-station label{display:block;margin:.8rem 0 .25rem}.try-station textarea{display:block;width:100%;font:inherit;margin-bottom:1rem}.try-station button{font:inherit;padding:.35rem .65rem;margin:.4rem 0}.try-station svg{display:block;max-width:100%;height:auto}.try-station [hidden]{display:none}.try-station fieldset{margin:1rem 0}</style></head><body><header><a href="../">← Faust Digital</a></header><main><h1 id="wann-ist-es-genug">Wann ist es genug?</h1>
+<p><strong>Faust Digital · Projektreflexion</strong> · <a href="#ausprobieren">Station direkt ausprobieren</a></p>
 <h3 id="faust--studierzimmer-ii-und-die-frage-noch-eine-runde">Faust ·
 Studierzimmer II und die Frage «Noch eine Runde?»</h3>
 <ol type="1">
@@ -45,6 +45,57 @@ oder prüfen, ob die Fragen eine Antwort nahelegen. Die Gruppe führt die
 Gespräche, wählt die Verse und entscheidet anhand des Probelaufs, wann
 welche Information erscheint.</li>
 </ol>
+<section class="try-station" id="ausprobieren" aria-labelledby="try-title">
+<h2 id="try-title">Noch eine Runde?</h2>
+<form id="faust-choice">
+<fieldset><legend>Du hast den Rang erreicht, den du dir für heute vorgenommen hast.</legend>
+<label><input type="radio" name="choice" value="aufhören" required> Ich höre auf.</label>
+<label><input type="radio" name="choice" value="weiterspielen"> Ich spiele weiter.</label></fieldset>
+<label for="why-first">Was gibt für dich den Ausschlag?</label><textarea id="why-first" rows="2" required></textarea>
+<button>Entscheidung festhalten</button>
+</form>
+<form id="faust-revise" hidden>
+<p id="choice-summary" role="status"></p>
+<fieldset><legend>Dein Team schreibt: «Bleib noch. Ohne dich können wir nicht zu fünft starten.»</legend>
+<label><input type="radio" name="choice" value="aufhören" required> Ich höre auf.</label>
+<label><input type="radio" name="choice" value="weiterspielen"> Ich spiele weiter.</label></fieldset>
+<label for="why-second">Welcher Grund wiegt jetzt am schwersten?</label><textarea id="why-second" rows="2" required></textarea>
+<button>Mit Fausts Wette vergleichen</button>
+</form>
+<div id="faust-check" hidden>
+<p id="revision-summary" role="status"></p>
+<h3>Jetzt am Originaltext prüfen</h3>
+<blockquote>Kannst du mich schmeichelnd je belügen,<br>Daß ich mir selbst gefallen mag,<br>Kannst du mich mit Genuß betrügen;<br>Das sey für mich der letzte Tag!<br>[…]<br>Werd’ ich zum Augenblicke sagen:<br>Verweile doch! du bist so schön!<br>Dann magst du mich in Fesseln schlagen,</blockquote>
+<p><a href="https://de.wikisource.org/wiki/Faust_-_Der_Trag%C3%B6die_erster_Teil#Studierzimmer_2">Faust I, Studierzimmer II, V. 1694–1701</a></p>
+<label for="faust-verdict">Fürchtet Faust das Aufhören, oder misstraut er dem Genuss, den Mephisto ihm verschaffen könnte? Nenne einen Vers und prüfe, ob dein eigener Grund fürs Weiterspielen auch zu Faust passt.</label>
+<textarea id="faust-verdict" rows="4"></textarea>
+</div>
+<p><small>Deine Antworten bleiben auf dieser geöffneten Seite.</small></p>
+</section>
+<script>
+{
+ const choice = document.querySelector('#faust-choice');
+ const revise = document.querySelector('#faust-revise');
+ const check = document.querySelector('#faust-check');
+ let initial;
+ choice.addEventListener('submit', event => {
+   event.preventDefault();
+   if (!document.querySelector('#why-first').value.trim()) return;
+   initial = new FormData(choice).get('choice');
+   document.querySelector('#choice-summary').textContent = 'Zuerst hast du dich für «' + initial + '» entschieden. Jetzt kommt eine Nachricht dazu.';
+   revise.hidden = false;
+   revise.querySelector('input').focus();
+ });
+ revise.addEventListener('submit', event => {
+   event.preventDefault();
+   if (!document.querySelector('#why-second').value.trim()) return;
+   const current = new FormData(revise).get('choice');
+   document.querySelector('#revision-summary').textContent = 'Deine Entscheidungen: zuerst «' + initial + '», danach «' + current + '».';
+   check.hidden = false;
+   check.querySelector('a').focus();
+ });
+}
+</script>
 <h3 id="euer-auftrag--45-minuten">Euer Auftrag · 45 Minuten</h3>
 <ol type="1">
 <li><strong>Alltag finden · 7 Minuten.</strong> Jede Person nennt einen
